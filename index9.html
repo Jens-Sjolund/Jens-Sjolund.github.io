@@ -50,7 +50,7 @@
         model: true
         mixin="controller"></a-entity-->
 
-        <a-entity hand-controls mixin="controller"></a-entity>
+        <a-entity hand-controls laser-controls raycaster="far: 2" mixin="controller"></a-entity>
 
         <a-plane material="color: gray" width="25" height="25" rotation="-90 0 0" position="0 0.2 0" static-body
         collision-filter="collidesWith: blue" physics-collider
