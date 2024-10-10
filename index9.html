@@ -13,6 +13,8 @@
     <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.1.0/dist/aframe-physics-system.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@^4.1.1/dist/aframe-event-set-component.min.js"></script>
     <script src="https://unpkg.com/aframe-physics-extras/dist/aframe-physics-extras.min.js"></script>
+    
+    <script src="https://www.unpkg.com/browse/aframe@1.1.0/src/components/oculus-go-controls.js"></script>
 </head>
 </head>
 <body>
@@ -39,7 +41,8 @@
             <a-entity position="0 0.3 -1" cursor-check></a-entity>
         </a-camera>
 
-        <!--a-entity oculus-touch-controls="hand: left"
+        <!--
+        <a-entity oculus-touch-controls="hand: left"
         model: true
         mixin="controller">
         </a-entity>
@@ -48,10 +51,10 @@
         model: true
         mixin="controller">
         </a-entity>
-
-        <a-entity oculus-go-controls
+        -->
+        <a-entity oculus-go-controls x-button-listener
         model: true
-        mixin="controller"></a-entity-->
+        mixin="controller"></a-entity
 
         <!-- a-entity hand-controls laser-controls raycaster="far: 2" mixin="controller"></a-entity -->
 
@@ -65,10 +68,10 @@
             collision-filter="group: blue; collidesWith: default, red, hands">
         </a-entity>
         
-        <!-- <a-box dynamic-body grabbale position="0.5 50 -0.5" material="color: blue"
+        <a-box dynamic-body grabbale position="0.5 50 -0.5" material="color: red"
                 width="0.5" height="0.5" depth="0.5"
                 collision-filter="group: blue; collidesWith: default, hands">
-        </a-box> -->
+        </a-box>
 
     </a-scene>
 </body>
